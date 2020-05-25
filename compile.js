@@ -23,4 +23,5 @@ var input = {
 
 var output = JSON.parse(solc.compile(JSON.stringify(input)));
 
-module.exports = output.contracts['lottery.sol']['Lottery'];
+exports.abi = output.contracts['lottery.sol']['Lottery'].abi;
+exports.bytecode = output.contracts['lottery.sol']['Lottery'].evm.bytecode.object;
