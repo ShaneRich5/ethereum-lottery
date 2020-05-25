@@ -13,5 +13,8 @@
     "solc": "^0.6.8",
     "truffle": "^5.1.27",
     "web3": "^1.2.8"
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }
