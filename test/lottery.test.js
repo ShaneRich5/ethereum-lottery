@@ -95,6 +95,13 @@ describe('Lottery Contract', () => {
         const finalBalance = await web3.eth.getBalance(player);
         const difference = finalBalance - initialBalance;
 
+        const lotteryClosingBalance = await web3.eth.getBalance(lottery.options.address);
+        const playersAfterClosing = await lottery.methods.getPlayers().call({
+            from: player
+        });
+
         assert(difference > web3.utils.toWei('1.8', 'ether'));
+        assert.equal(0, playersAfterClosing.length);
+        assert.equal(0, lotteryClosingBalance);
     });
 });
