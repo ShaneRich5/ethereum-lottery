@@ -1,0 +1,20 @@
+{
+  "name": "ethereum-lottery",
+  "version": "1.0.0",
+  "description": "A proof of concept lottery system powered by the ethereum block chain",
+  "main": "index.js",
+  "repository": "git@github.com:ShaneRich5/ethereum-lottery.git",
+  "author": "shane.richards121@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.0.35",
+    "ganache-cli": "^6.9.1",
+    "mocha": "^7.2.0",
+    "solc": "^0.6.8",
+    "truffle": "^5.1.27",
+    "web3": "^1.2.8"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
